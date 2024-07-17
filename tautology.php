@@ -77,47 +77,61 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <!-- <link rel="stylesheet" href="assets/bootstrap.css">
-    <style type="text/css">
-        body{ font: 14px sans-serif; }
-        .wrapper{ width: 350px; padding: 20px; }
-    </style> -->
-</head>
-<body class ="wrapper">
-    <div class="wrapper1">
-    <div class="container">
+	<!-- Swiper JS link -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
-        <h1>Login</h1>
-        <p>Enter your credentials to login.</p>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="form">
-            <div class="<?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-                <label>Username</label>
-                <input type="text" name="username" autocomplete="off" class="" value="<?php echo $username; ?>">
-                <span class="help-block"><?php echo $username_err; ?></span>
-            </div>    
-            <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                <label>Password</label>
-                <input type="password" name="password" autocomplete="off" class="">
-                <span class="help-block"><?php echo $password_err; ?></span>
+	<!-- Font awesome cdn link -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+	<!-- Custom CSS File link -->
+    <link href="/dist/css/tabler.min.css" rel="stylesheet"/>
+    <link href="/dist/css/tabler-flags.min.css" rel="stylesheet"/>
+    <link href="/dist/css/tabler-payments.min.css" rel="stylesheet"/>
+    <link href="/dist/css/tabler-vendors.min.css" rel="stylesheet"/>
+    <link href="/dist/css/demo.min.css" rel="stylesheet"/>
+
+</head>
+<body class="border-top-wide border-primary d-flex flex-column wrapper">
+    <div class="page page-center">
+        <div class="container-tight py-4" style="
+    z-index: 2;
+">
+            <div class="container">
+                <h2 class="card-title text-center mb-4">Login to your account</h2>
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="form card card-md">
+                    <div class="card-body">
+                        <div class="mb-3 <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
+                            <label class="form-label">Username</label>
+                            <input type="text" name="username" autocomplete="off" class="form-control" value="<?php echo $username; ?>">
+                            <span class="help-block"><?php echo $username_err; ?></span>
+                        </div>
+                        <div class="mb-2 <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+                            <label class="form-label">Password</label>
+                            <input type="password" name="password" autocomplete="off" class="form-control">
+                            <span class="help-block"><?php echo $password_err; ?></span>
+                        </div>
+                        <div class="form-footer">
+                            <input type="submit" class="btn btn-primary w-100" value="Login">
+                        </div>
+                    </div>
+                </form>
+                <div class="text-center text-muted mt-3">
+                    Don't have an account yet? <a href="register.php" tabindex="-1">Sign up</a>
+                </div>
             </div>
-            <div class="">
-                <input type="submit" id="login-button" class="btn btn-primary" value="Login">
-            </div>
-            <p>Don't have an account? <a href="register.php">Sign up</a>.</p>
-        </form>
-</div>
-  <ul class="bg-bubbles">
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-    </div>    
+        </div>
+        <ul class="bg-bubbles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
 </body>
 </html>

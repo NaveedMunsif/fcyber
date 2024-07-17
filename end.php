@@ -78,41 +78,54 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+    	<!-- Custom CSS File link -->
+        <link href="/dist/css/tabler.min.css" rel="stylesheet"/>
+    <link href="/dist/css/tabler-flags.min.css" rel="stylesheet"/>
+    <link href="/dist/css/tabler-payments.min.css" rel="stylesheet"/>
+    <link href="/dist/css/tabler-vendors.min.css" rel="stylesheet"/>
+    <link href="/dist/css/demo.min.css" rel="stylesheet"/>
 </head>
-<body class="wrapper">
-    <div class="wrapper1">
-    <div class="container">
-        <h2>Login</h2>
-        <p>Enter your credentials to login.</p>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <div class="<?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-                <label>Username</label>
-                <input type="text" name="username" autocomplete="off" class="" value="<?php echo $username; ?>">
-                <span class="help-block"><?php echo $username_err; ?></span>
-            </div>    
-            <div class=" <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                <label>Password</label>
-                <input type="password" name="password" autocomplete="off" class="">
-                <span class="help-block"><?php echo $password_err; ?></span>
+<body class="border-top-wide border-primary d-flex flex-column wrapper">
+<div class="page page-center">
+   <div class="container-tight py-4" style="
+      z-index: 2;
+      ">
+      <div class="container">
+         <h2 class="card-title text-center mb-4">Login to your account</h2>
+         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            <div class="card-body">
+               <div class="mb-3 <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
+                  <label class="form-label">Username</label>
+                  <input type="text" name="username" autocomplete="off" class="form-control" value="<?php echo $username; ?>">
+                  <span class="help-block"><?php echo $username_err; ?></span>
+               </div>
+               <div class="mb-2 <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+                  <label class="form-label">Password</label>
+                  <input type="password" name="password" autocomplete="off" class="form-control">
+                  <span class="help-block"><?php echo $password_err; ?></span>
+               </div>
+               <div class="form-footer">
+                  <input type="submit" class="btn btn-primary w-100" value="Login">
+               </div>
             </div>
-            <div class="">
-                <input type="submit" id="login-button" class="" value="Login">
-            </div>
-            <p>Don't have an account? <a href="register.php">Sign up</a>.</p>
-        </form>
-    </div>  
-    <ul class="bg-bubbles">
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-	</ul>  
-    </div>  
+         </form>
+         <div class="text-center text-muted mt-3">
+            Don't have an account yet? <a href="register.php" tabindex="-1">Sign up</a>
+         </div>
+      </div>
+   </div>
+   <ul class="bg-bubbles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+   </ul>
+</div>
 </body>
 </html>
