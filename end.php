@@ -92,7 +92,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
       ">
       <div class="container">
          <h2 class="card-title text-center mb-4">Login to your account</h2>
-         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="form card card-md">
             <div class="card-body">
                <div class="mb-3 <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                   <label class="form-label">Username</label>
