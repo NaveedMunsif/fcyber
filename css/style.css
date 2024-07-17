@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+:root {
+	--main-color: #8e44ad;
+	--black: #222;
+	--white: #fff;
+	--light-black: #777;
+	--light-white: #fff9;
+	--dark-bg: rgba(0,0,0,.7) ;
+	--light-bg: #eee;
+	--border: .1rem solid var(--black);
+	--border-shadow:0, .5rem 1rem rgba(0,0,0,.1);
+	--box-shadow:0 1.5rem 3rem rgba(0,0,0,.1);
+}
+
+* {
+	font-family: "Lato", sans-serif;
+	margin: 0; padding: 0;
+	box-sizing: border-box;
+	outline: none; border: none;
+	text-decoration: none;
+	text-transform: capitalize;
+}
+
+html {
+	font-size: 62.5%;
+	overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+	width: 1rem;
+}
+
+html::-webkit-scrollbar-thumb {
+	background-color: var(--main-color);
+}
+
+section {
+	padding: 5rem 10%;
+}
+
+.btn {
+	display: inline-block;
+	background: darkkhaki;
+	margin-top: 1rem;
+	color: var(--white);
+	font-size: 1.7rem;
+	padding: 1rem 3rem;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background: var(--main-color);
+}
+
+.heading-title {
+	text-align: center;
+	margin-bottom: 3rem;
+	font-size: 6rem;
+	text-transform: uppercase;
+	color: var(--main-color);
+}
+
+.header {
+	position: sticky;
+	top: 0; left: 0; right: 0;
+	z-index: 1000;
+	background-color: var(--light-white);
+	display: flex;
+	padding-top: 2.5rem;
+	padding-bottom: 2.5rem;
+	box-shadow: var(--box-shadow);
+	align-items: center;
+	justify-content: space-between;
+
+}
+
+.header .logo {
+	font-size: 2.5rem;
+	color: var(--main-color);
+/*	font-weight: bold;*/
+	font-family: "Abril Fatface", serif;
+}
+
+.header .navbar a{
+	font-size: 2rem;
+	margin-left: 2rem;
+	color: var(--black);
+}
+
+.header .navbar a:hover{
+	color: var(--main-color);
+}
+
+#menu-btn{
+	font-size: 2.5rem;
+	cursor: pointer;
+	color: var(--black);
+	display: none;
+}
+
+.home {
+	padding: 0;
+}
+
+.home .slide {
+	text-align: center;
+	padding: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-size: cover !important;
+	background-position: center !important;
+	min-height: 60rem;
+}
+
+.home .slide .content{
+	width: 85rem;
+}
+
+.home .slide .content span{
+	display: block;
+	font-size: 2.2rem;
+	color: var(--light-white);
+	padding-bottom: 1rem;
+}
+
+.home .slide .content h3{
+	font-size: 6vw;
+	color: whitesmoke;
+	text-transform: uppercase;
+	line-height: 1;
+	text-shadow: var(--border-shadow);
+	padding: 1rem 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutheading {
+	padding: 3rem 10rem;
+	font-family: "Abril Fatface", serif;
+}
+
+.aboutheading h1 {
+/*	display: block;*/
+	font-size: 5.2rem;
+	color: seashell;
+	padding-bottom: 1rem;
+/*	text-decoration: underline;*/
+}
+
+.aboutheading h2 {
+/*	display: block;*/
+	font-size: 2.2rem;
+	color: seashell;
+	padding-bottom: 1rem;
+/*	text-decoration: underline;*/
+}
+
+.aboutheading p {
+	font-size: 2rem;
+	color: seashell;
+	padding-bottom: 2rem;
+}
+
+.footer{
+	background: url(../images/footer.jpg) no-repeat;
+	background-size: cover;
+	background-position: cover;
+	background-attachment: fixed;
+	padding-bottom: 2.6rem;
+}
+
+.footer .box-container{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	gap: 3rem;
+}
+
+.footer .box-container .box h3{
+	color: var(--black);
+	font-size: 2.5rem;
+	padding-bottom: 2rem;
+}
+
+.footer .box-container .box a{
+	color: var(--light-black);
+	font-size: 1.5rem;
+	padding-bottom: 1rem;
+	display: block;
+}
+
+.footer .box-container .box a i{
+	color: var(--black);
+	padding-right: .5rem;
+	transition: .2s linear;
+}
+
+.footer .box-container .box a:hover i{
+	padding-right: 2rem;
+}
+
+.footer .credit {
+	text-align: center;
+	padding-top: 3rem;
+	margin-top: 3rem;
+	border-top: .1rem solid purple;
+	font-size: 2rem;
+	color: var(--black);
+}
+
+.footer .credit span{
+	color: var(--main-color);
+}
+/*media queries*/
+@media (max-width:1200px) {
+	section {
+		padding: 3rem 5%;
+	}
+}
