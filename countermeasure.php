@@ -79,38 +79,49 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 }
 ?>
 
+<style>
+<?php include 'css/login.css'; ?>
+</style>
  
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="assets/bootstrap.css">
-    <style type="text/css">
-        body{ font: 14px sans-serif; }
-        .wrapper{ width: 350px; padding: 20px; }
-    </style>
 </head>
-<body>
-    <div class="wrapper">
+<body  class="wrapper">
+    <div class="container">
         <h2>Login</h2>
         <p>Enter your credentials to login.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
+            <div class="<?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                 <label>Username</label>
-                <input type="text" name="username" autocomplete="off" class="form-control" value="<?php echo $username; ?>">
+                <input type="text" name="username" autocomplete="off" class="" value="<?php echo $username; ?>">
                 <span class="help-block"><?php echo $username_err; ?></span>
             </div>    
-            <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+            <div class=" <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
                 <label>Password</label>
-                <input type="password" name="password" autocomplete="off" class="form-control">
+                <input type="password" name="password" autocomplete="off" class="">
                 <span class="help-block"><?php echo $password_err; ?></span>
             </div>
-            <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Login">
+            <div class="">
+                <input type="submit" id="login-button" class="" value="Login">
             </div>
             <p>Don't have an account? <a href="register.php">Sign up</a>.</p>
         </form>
-    </div>    
+    </div>   
+    <ul class="bg-bubbles">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+    
 </body>
 </html>
