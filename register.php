@@ -118,6 +118,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 <?php include 'css/login.css'; ?>
 </style>
  
+<style>
+.wrapper {
+  height: auto; /* Change height to auto */
+  transform: translateY(-4%); /* Center vertically */
+}
+
+.container {
+  height: auto; /* Change height to auto */
+}
+</style>
 <!DOCTYPE html>
 <html lang="en">
 <head>
