@@ -133,46 +133,58 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 <head>
     <meta charset="UTF-8">
     <title>Sign Up</title>
+    <link href="/dist/css/tabler.min.css" rel="stylesheet"/>
+    <link href="/dist/css/tabler-flags.min.css" rel="stylesheet"/>
+    <link href="/dist/css/tabler-payments.min.css" rel="stylesheet"/>
+    <link href="/dist/css/tabler-vendors.min.css" rel="stylesheet"/>
+    <link href="/dist/css/demo.min.css" rel="stylesheet"/>
 </head>
-<body class="wrapper">
-    <div class="container">
-        <h2>Sign Up</h2>
-        <p>To create an account.</p>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <div class="<?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-                <label>Username</label>
-                <input type="text" name="username" autocomplete="off" class="" value="<?php echo $username; ?>">
-                <span class="help-block"><?php echo $username_err; ?></span>
-            </div>    
-            <div class=" <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                <label>Password</label>
-                <input type="password" name="password" autocomplete="off" class="" value="<?php echo $password; ?>">
-                <span class="help-block"><?php echo $password_err; ?></span>
-            </div>
-            <div class=" <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
-                <label>Confirm Password</label>
-                <input type="password" name="confirm_password" autocomplete="off" class="" value="<?php echo $confirm_password; ?>">
-                <span class="help-block"><?php echo $confirm_password_err; ?></span>
-            </div>
-            <div class="">
-                <input type="submit" id="login-button" style="appearance: none;outline: 0;background-color: white;border: 0;padding: 10px 15px;color: #53e3a6;border-radius: 3px;width: 250px;transition-duration: 0.25s;cursor: pointer;font-size: 18px;" class="" value="Submit">
-                <input type="reset" id="login-button" value="Reset">
-            </div>
-            <p>Already have account? <a href="implementation.php">Login here</a>.</p>
-        </form>
-    </div>  
-    
-    <ul class="bg-bubbles">
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
+<body class="border-top-wide border-primary d-flex flex-column wrapper">
+  <div class="page page-center">
+    <div class="container-tight py-4" style="z-index: 2;">
+      <div class="container">
+      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="card card-md">
+  <div class="card-body">
+    <h2 class="card-title text-center mb-4">Create new account</h2>
+    <div class="mb-3 <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
+      <label class="form-label">Username</label>
+      <input type="text" name="username" autocomplete="off" class="form-control" value="<?php echo $username; ?>">
+      <span class="help-block"><?php echo $username_err; ?></span>
+    </div>
+    <div class="mb-2 <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+      <label class="form-label">Password</label>
+      <input type="password" name="password" autocomplete="off" class="form-control">
+      <span class="help-block"><?php echo $password_err; ?></span>
+    </div>
+    <div class="mb-2 <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
+      <label class="form-label">Confirm Password</label>
+      <input type="password" name="confirm_password" autocomplete="off" class="form-control">
+      <span class="help-block"><?php echo $confirm_password_err; ?></span>
+    </div>
+    <div class="form-footer">
+      <input type="submit" class="btn btn-primary w-100" style="margin-bottom: 4px;"value="Submit">
+      <input type="reset" class="btn btn-secondary w-100" value="Reset">
+    </div>
+  </div>
+</form>
+
+        <div class="text-center text-muted mt-3"> Already have account? <a href="implementation.php">Sign in</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <ul class="bg-bubbles">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
 </body>
 </html>

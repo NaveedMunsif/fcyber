@@ -13,24 +13,16 @@
 
 	<!-- Custom CSS File link -->
 	<link rel="stylesheet" href="css/style.css">
-
+	<link href="/dist/css/tabler.min.css" rel="stylesheet"/>
+    <link href="/dist/css/tabler-flags.min.css" rel="stylesheet"/>
+    <link href="/dist/css/tabler-payments.min.css" rel="stylesheet"/>
+    <link href="/dist/css/tabler-vendors.min.css" rel="stylesheet"/>
+    <link href="/dist/css/demo.min.css" rel="stylesheet"/>
 </head>
 <body>
 
 <!-- header section starts -->
-<section class="header">
-	<a href="home.php" class="logo">SQL INJECTION ATTACK</a>
 
-	<nav class="navbar">
-		<a href="home.php">Home</a>
-		<a href="documentation.php">Documentation</a>
-		<a href="database.php">Database</a>
-		<a href="implementation.php">Implementation</a>	
-		<a href="about.php">Group 6</a>
-
-	</nav>
-	<div id="menu-btn" class="fas fa-bars"></div>
-</section>
 <!-- header section ends -->
 
 <style>
@@ -47,12 +39,21 @@
         padding: 0;
     }
 </style>
-
+<?php include_once("header.php")
+    ?>
+        
+<div class="page-wrapper">
+	<div class="container-xl">
+  <!-- Page title -->
+  <!-- Closing page-header div -->
+	</div>
+<div class="page-body">  
         <embed class="pdf" 
                src=
 "images/lamp.pdf"
             width="800" height="500">
 
+</div>
 <!-- Swiper JS link -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
