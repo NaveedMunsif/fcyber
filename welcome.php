@@ -14,18 +14,28 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <head>
     <meta charset="UTF-8">
     <title>Welcome</title>
-    <link rel="stylesheet" href="assets/bootstrap.css">
-    <style type="text/css">
-        body{ font: 14px sans-serif; text-align: center; }
-    </style>
+	<link href="/dist/css/tabler.min.css" rel="stylesheet"/>
+    <link href="/dist/css/tabler-flags.min.css" rel="stylesheet"/>
+    <link href="/dist/css/tabler-payments.min.css" rel="stylesheet"/>
+    <link href="/dist/css/tabler-vendors.min.css" rel="stylesheet"/>
+    <link href="/dist/css/demo.min.css" rel="stylesheet"/>
 </head>
-<body>
-    <div class="page-header">
-        <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome</h1>
-	      <img src="images/success.png" height="500" width="1400" />
+
+<?php include_once("header.php")
+    ?>
+<body class="border-top-wide border-primary d-flex flex-column wrapper">
+    <div class="page page-center">
+        <div class="container-tight py-4" style="
+    z-index: 2;
+">
+            <div class="container">
+            <a href="logout.php" class="btn btn-danger btn-square w-100">
+            Log Out</a>
+               
+            </div>
+        </div>
     </div>
-    <p>
-        <a href="logout.php" class="btn btn-danger">Sign Out</a>
-    </p>
+    <?php include_once("jsdata.php")
+    ?>
 </body>
 </html>

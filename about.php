@@ -22,20 +22,16 @@
 </head>
 <body>
 
-<!-- header section starts -->
-
-<!-- header section ends -->
 
 <?php include_once("header.php")
     ?>
-		<div class="page-wrapper">
+<div class="page-wrapper">
 	<div class="container-xl">
   <!-- Page title -->
   <!-- Closing page-header div -->
+	</div>
+<div class="page-body">    
 </div>
-<div class="page-body">  
-     
-
 </div>
 <!-- footer section ends -->
 
